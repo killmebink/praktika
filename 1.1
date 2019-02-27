@@ -16,22 +16,19 @@ return 0;
 
 //praktika 1.2
 #include <iostream>
-
 using namespace std;
-
 int main(){
   int select, p, m;
-
-  cout << "введите два числа через пробел нажмите клавишу enter: " << endl;
+  cout << "Vvedite 2 chisla i nazhmite enter: " << endl;
   cin >> p >> m;
-  cout << "выберите действие и нажмите клавишу enter: " << endl;
-  cout << "1 сложить" << endl;
-  cout << "2 вычесть" << endl;
-  cout << "3 умножить" << endl;
-  cout << "4 разделить" << endl;
+  cout << "Vibirete deistvie i nazhmite enter: " << endl;
+  cout << "1 slozhit" << endl;
+  cout << "2 vichest" << endl;
+  cout << "3 umnozhit" << endl;
+  cout << "4 delit" << endl;
   cin >> select;
-
-  switch (select){
+  switch (select)
+  {
     case 1:
       cout << p << " + " << m << " = " << p + m << endl;
       break;
@@ -42,13 +39,18 @@ int main(){
       cout << p << " * " << m << " = " << p * m << endl;
       break;
     case 4:
-      cout << p << " / " << m << " = " << p / m << endl;
+    while (m==0)
+    {
+    cout<<"Oshibka na 0 delit nelzya"<<endl;
+    cout<<"Vvedite chislo ne ravnoe nulu:"<<endl;
+    cin>>m;
+    }
+      cout << p << " / " << m << " = "<<p/m <<  endl;
       break;
     default:
-      cout << "Условие такого: ----> Условие такое :)-" << endl;
+      cout << "-" << endl;
       break;
   }
-
   return 0;
 }
 
