@@ -1,3 +1,4 @@
+//praktika 1.1
 #include <iostream>
 using namespace std;
  
@@ -11,4 +12,42 @@ cout << "Vvedite svou familiu."<<'\n';
 cin >> b;
 cout << "Zdravstvuite, " << a << ' ' << b <<'\n';
 return 0;
+}
+
+//praktika 1.2
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int select, p, m;
+
+  cout << "введите два числа через пробел нажмите клавишу enter: " << endl;
+  cin >> p >> m;
+  cout << "выберите действие и нажмите клавишу enter: " << endl;
+  cout << "1 сложить" << endl;
+  cout << "2 вычесть" << endl;
+  cout << "3 умножить" << endl;
+  cout << "4 разделить" << endl;
+  cin >> select;
+
+  switch (select){
+    case 1:
+      cout << p << " + " << m << " = " << p + m << endl;
+      break;
+    case 2:
+      cout << p << " - " << m << " = " << p - m << endl;
+      break;
+    case 3:
+      cout << p << " * " << m << " = " << p * m << endl;
+      break;
+    case 4:
+      cout << p << " / " << m << " = " << p / m << endl;
+      break;
+    default:
+      cout << "Условие такого: ----> Условие такое :)-" << endl;
+      break;
+  }
+
+  return 0;
 }
